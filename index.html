@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <script src="data.js"></script>
+
+    <!-- NAVIGATION -->
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="#" id="nav-name" class="nav-logo"></a>
+            <div class="nav-links">
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#education" class="nav-link">Education</a>
+                <a href="#major-projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <a href="#" id="resume-nav-btn" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.8rem;">Resume</a>
+            </div>
+            <button id="mobile-menu-btn" class="mobile-menu-btn">
+                <span class="iconify" data-icon="mdi:menu" data-width="24"></span>
+            </button>
+        </div>
+        <div id="mobile-menu" class="mobile-menu">
+            <a href="#skills" class="mobile-link">Skills</a>
+            <a href="#experience" class="mobile-link">Experience</a>
+            <a href="#education" class="mobile-link">Education</a>
+            <a href="#major-projects" class="mobile-link">Projects</a>
+            <a href="#contact" class="mobile-link">Contact</a>
+            <a href="#" id="resume-mobile-btn" class="mobile-link">Download Resume</a>
+        </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main id="main-content" class="data-loading" style="padding-top: 6rem;">
+
+        <!-- HERO -->
+        <section class="wrapper section" style="padding-top: 2rem;">
+            <div style="max-width: 48rem;">
+                <h1 id="hero-name" class="heading-xl animate-fade-in-up" style="margin-bottom: 1rem;"></h1>
+                <p id="hero-tagline" class="animate-fade-in-up delay-100" style="font-size: 1.25rem; line-height: 1.6; max-width: 42rem; margin-bottom: 1.5rem;"></p>
+                <div class="animate-fade-in-up delay-200" style="display: flex; flex-wrap: wrap; gap: 0.75rem;">
+                    <a href="#experience" class="btn btn-primary">
+                        View My Work
+                        <span class="iconify" data-icon="mdi:arrow-down" data-width="16"></span>
+                    </a>
+                    <a href="#contact" class="btn btn-ghost">Get In Touch</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section id="skills" class="wrapper section">
+            <div class="section-header">
+                <span class="section-label">Toolkit</span>
+                <h2 class="heading-lg">Skills</h2>
+            </div>
+            <div id="skills-list" class="skills-grid-container"></div>
+        </section>
+
+        <!-- WORK EXPERIENCE -->
+        <section id="experience" class="wrapper section">
+            <div class="section-header">
+                <span class="section-label">Career</span>
+                <h2 class="heading-lg">Work Experience</h2>
+            </div>
+            <div id="experience-list" style="display: grid; gap: 0.75rem;"></div>
+        </section>
+
+        <!-- EDUCATION -->
+        <section id="education" class="wrapper section">
+            <div class="section-header">
+                <span class="section-label">Background</span>
+                <h2 class="heading-lg">Education</h2>
+            </div>
+            <div id="education-list" style="display: grid; gap: 0.75rem;"></div>
+        </section>
+
+        <!-- MAJOR PROJECTS -->
+        <section id="major-projects" class="wrapper section">
+            <div class="section-header">
+                <span class="section-label">Highlights</span>
+                <h2 class="heading-lg">Major Projects</h2>
+            </div>
+            <div id="major-projects-list" style="display: grid; gap: 1rem;"></div>
+        </section>
+
+        <!-- SIDE PROJECTS -->
+        <section id="side-projects" class="wrapper section">
+            <div class="section-header">
+                <span class="section-label">Exploring</span>
+                <h2 class="heading-lg">Side Projects</h2>
+            </div>
+            <div id="side-projects-list" style="display: grid; grid-template-columns: repeat(1, 1fr); gap: 1rem;" class="md:grid-cols-2"></div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="wrapper section">
+            <div class="contact-box">
+                <div style="max-width: 36rem;">
+                    <span class="section-label">Connect</span>
+                    <h2 class="heading-lg" style="margin-bottom: 0.75rem;">Let's Talk</h2>
+                    <p style="line-height: 1.6; margin-bottom: 1.5rem;">
+                        I'm always open to new opportunities, collaborations, or just a good conversation about tech. Reach out anytime.
+                    </p>
+                    <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1.5rem;">
+                        <a id="email-link" href="#" class="btn btn-primary">
+                            <span class="iconify" data-icon="mdi:email-outline" data-width="18"></span>
+                            Email Me
+                        </a>
+                        <a id="linkedin-link" href="#" target="_blank" rel="noopener" class="btn btn-ghost">
+                            <span class="iconify" data-icon="mdi:linkedin" data-width="18"></span>
+                            LinkedIn
+                        </a>
+                        <a id="github-link" href="#" target="_blank" rel="noopener" class="btn btn-ghost">
+                            <span class="iconify" data-icon="mdi:github" data-width="18"></span>
+                            GitHub
+                        </a>
+                        <a id="resume-contact-btn" href="#" class="btn btn-ghost">
+                            <span class="iconify" data-icon="mdi:file-download-outline" data-width="18"></span>
+                            Download Resume
+                        </a>
+                    </div>
+                    <p id="email-display" style="font-size: 0.875rem;" class="text-muted"></p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="wrapper" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem;">
+            <p style="font-size: 0.875rem;">&copy; <span id="year"></span> <span id="footer-name"></span>. All rights reserved.</p>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <a id="footer-email" href="#"><span class="iconify" data-icon="mdi:email-outline" data-width="20"></span></a>
+                <a id="footer-linkedin" href="#" target="_blank" rel="noopener"><span class="iconify" data-icon="mdi:linkedin" data-width="20"></span></a>
+                <a id="footer-github" href="#" target="_blank" rel="noopener"><span class="iconify" data-icon="mdi:github" data-width="20"></span></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- TOAST -->
+    <div id="toast" style="position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 50; background: var(--text-primary); color: var(--bg-base); font-size: 0.875rem; padding: 0.75rem 1.25rem; border-radius: 0.5rem; box-shadow: 0 20px 40px rgba(0,0,0,0.5); transform: translateY(5rem); opacity: 0; transition: all 0.3s ease; pointer-events: none; display: flex; align-items: center; gap: 0.5rem;">
+        <span class="iconify" data-icon="mdi:check-circle" data-width="18" style="color: #22c55e;"></span>
+        <span id="toast-msg">Resume download started</span>
+    </div>
+
+    <script>
+        // ============================================================
+        //  ALL CONTENT COMES FROM data.js — NO HARDCODED DATA HERE
+        // ============================================================
+
+        function populatePersonalInfo() {
+            var d = PORTFOLIO_DATA;
+            document.title = d.name + " — Portfolio";
+
+            document.getElementById("nav-name").textContent    = d.name;
+            document.getElementById("hero-name").textContent   = d.name;
+            document.getElementById("footer-name").textContent = d.name;
+
+            document.getElementById("hero-tagline").textContent = d.tagline;
+
+            document.getElementById("email-link").href          = "mailto:" + d.email;
+            document.getElementById("email-display").textContent = d.email;
+            document.getElementById("footer-email").href        = "mailto:" + d.email;
+
+            document.getElementById("linkedin-link").href   = d.linkedin;
+            document.getElementById("footer-linkedin").href = d.linkedin;
+
+            document.getElementById("github-link").href   = d.github;
+            document.getElementById("footer-github").href = d.github;
+
+            document.getElementById("year").textContent = new Date().getFullYear();
+        }
+
+        function showToast(message) {
+            var toast = document.getElementById("toast");
+            var msg   = document.getElementById("toast-msg");
+            msg.textContent = message;
+            toast.style.transform = "translateY(0)";
+            toast.style.opacity = "1";
+            setTimeout(function() {
+                toast.style.transform = "translateY(5rem)";
+                toast.style.opacity = "0";
+            }, 3000);
+        }
+
+        function handleResumeDownload(e) {
+            e.preventDefault();
+            var link = document.createElement("a");
+            link.href = PORTFOLIO_DATA.resumeFile;
+            link.download = PORTFOLIO_DATA.resumeFile;
+            link.click();
+            showToast("Resume download started");
+        }
+
+        // ── Skill Format: "SkillName: How I gained it" ──
+        function renderSkill(skill) {
+            return '<div class="skill-item">'
+                +  '<span class="skill-item-name">' + skill.name + ':</span> '
+                +  '<span class="skill-item-how">' + skill.how + '</span>'
+                +  '</div>';
+        }
+
+        // ── Project Links ──
+        function renderProjectLinks(proj) {
+            var html = '<div class="project-links">';
+            if (proj.website && proj.website.trim() !== "") {
+                html += '<a href="' + proj.website + '" target="_blank" rel="noopener" class="project-link">'
+                     +  '<span class="iconify" data-icon="mdi:open-in-new" data-width="16"></span> Live Site</a>';
+            }
+            if (proj.github && proj.github.trim() !== "") {
+                html += '<a href="' + proj.github + '" target="_blank" rel="noopener" class="project-link">'
+                     +  '<span class="iconify" data-icon="mdi:github" data-width="16"></span> Source Code</a>';
+            }
+            html += '</div>';
+            return html;
+        }
+
+        function setupToggle(toggleClass, contentPrefix) {
+            document.querySelectorAll("." + toggleClass).forEach(function(btn) {
+                btn.addEventListener("click", function() {
+                    var idx     = btn.dataset.index;
+                    var content = document.getElementById(contentPrefix + "-" + idx);
+                    var chevron = btn.querySelector(".chevron-icon");
+                    content.classList.toggle("open");
+                    chevron.classList.toggle("rotated");
+                });
+            });
+        }
+
+        // ── Skills ──
+        function renderSkills() {
+            var container = document.getElementById("skills-list");
+            var html = "";
+            PORTFOLIO_DATA.skills.forEach(function(cat) {
+                html += '<div class="card" style="padding: 1.25rem;">'
+                     +  '<h3 class="text-accent" style="font-size: 0.875rem; font-weight: 600; margin-bottom: 0.75rem;">' + cat.category + '</h3>'
+                     +  '<div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">';
+                cat.items.forEach(function(item) {
+                    html += '<span class="skill-tag-simple">' + item + '</span>';
+                });
+                html += '</div></div>';
+            });
+            container.innerHTML = html;
+        }
+
+        // ── Work Experience ──
+        function renderExperience() {
+            var container = document.getElementById("experience-list");
+            var html = "";
+            PORTFOLIO_DATA.experience.forEach(function(exp, i) {
+                html += '<div class="card">'
+                    +  '<button class="exp-toggle card-header" data-index="' + i + '">'
+                    +  '<div style="flex: 1; min-width: 0;">'
+                    +  '<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; margin-bottom: 0.25rem;">'
+                    +  '<h3 class="heading-md">' + exp.title + '</h3>'
+                    +  '<span class="text-muted font-mono" style="font-size: 0.875rem;">' + exp.date + '</span>'
+                    +  '</div>'
+                    +  '<p class="text-accent" style="font-size: 0.875rem; font-weight: 500;">' + exp.company + '</p>'
+                    +  '</div>'
+                    +  '<span class="iconify chevron-icon text-muted" data-icon="mdi:chevron-down" data-width="24"></span>'
+                    +  '</button>'
+                    +  '<div class="expand-content" id="exp-content-' + i + '">'
+                    +  '<div class="card-body">'
+                    +  '<p style="line-height: 1.6; margin-bottom: 1rem;">' + exp.description + '</p>'
+                    +  '<div>'
+                    +  '<p class="text-muted" style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem;">Skills Gained</p>'
+                    +  '<div class="skills-list">';
+                exp.skills.forEach(function(s) { html += renderSkill(s); });
+                html += '</div></div></div></div></div>';
+            });
+            container.innerHTML = html;
+            setupToggle("exp-toggle", "exp-content");
+        }
+
+        // ── Education ──
+        function renderEducation() {
+            var container = document.getElementById("education-list");
+            var html = "";
+            PORTFOLIO_DATA.education.forEach(function(edu, i) {
+                html += '<div class="card">'
+                    +  '<button class="edu-toggle card-header" data-index="' + i + '">'
+                    +  '<div style="flex: 1; min-width: 0;">'
+                    +  '<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; margin-bottom: 0.25rem;">'
+                    +  '<h3 class="heading-md">' + edu.degree + '</h3>'
+                    +  '<span class="text-muted font-mono" style="font-size: 0.875rem;">' + edu.date + '</span>'
+                    +  '</div>'
+                    +  '<p class="text-accent" style="font-size: 0.875rem; font-weight: 500;">' + edu.school + '</p>'
+                    +  '</div>'
+                    +  '<span class="iconify chevron-icon text-muted" data-icon="mdi:chevron-down" data-width="24"></span>'
+                    +  '</button>'
+                    +  '<div class="expand-content" id="edu-content-' + i + '">'
+                    +  '<div class="card-body">'
+                    +  '<p style="line-height: 1.6; margin-bottom: 1rem;">' + edu.description + '</p>'
+                    +  '<div>'
+                    +  '<p class="text-muted" style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem;">Skills Gained</p>'
+                    +  '<div class="skills-list">';
+                edu.skills.forEach(function(s) { html += renderSkill(s); });
+                html += '</div></div></div></div></div>';
+            });
+            container.innerHTML = html;
+            setupToggle("edu-toggle", "edu-content");
+        }
+
+        // ── Major Projects ──
+        function renderMajorProjects() {
+            var container = document.getElementById("major-projects-list");
+            var html = "";
+            PORTFOLIO_DATA.majorProjects.forEach(function(proj, i) {
+                var hasImage = proj.image && proj.image.trim() !== "";
+                var hasLinks = (proj.github && proj.github.trim() !== "") || (proj.website && proj.website.trim() !== "");
+                var linkIcon = proj.website
+                    ? '<span class="iconify text-muted" data-icon="mdi:open-in-new" data-width="14"></span>'
+                    : '<span class="iconify text-muted" data-icon="mdi:code-tags" data-width="14"></span>';
+
+                html += '<div class="card">';
+                if (hasImage) {
+                    html += '<div class="card-img-lg">'
+                         +  '<img src="' + proj.image + '" alt="' + proj.title + '" loading="lazy" onerror="this.parentElement.style.display=\'none\'">'
+                         +  '</div>';
+                }
+                html += '<button class="major-toggle card-header" data-index="' + i + '">'
+                    +  '<div style="flex: 1; min-width: 0; display: flex; align-items: center; gap: 0.5rem;">'
+                    +  linkIcon
+                    +  '<h3 class="heading-md">' + proj.title + '</h3>'
+                    +  '<span class="text-muted font-mono" style="font-size: 0.875rem;">' + proj.date + '</span>'
+                    +  '</div>'
+                    +  '<span class="iconify chevron-icon text-muted" data-icon="mdi:chevron-down" data-width="24"></span>'
+                    +  '</button>'
+                    +  '<div class="expand-content" id="major-content-' + i + '">'
+                    +  '<div class="card-body">'
+                    +  '<p style="line-height: 1.6; margin-bottom: 0.75rem;">' + proj.description + '</p>';
+                if (hasLinks) { html += renderProjectLinks(proj); }
+                html += '<div>'
+                    +  '<p class="text-muted" style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem;">Skills Gained</p>'
+                    +  '<div class="skills-list">';
+                proj.skills.forEach(function(s) { html += renderSkill(s); });
+                html += '</div></div></div></div></div>';
+            });
+            container.innerHTML = html;
+            setupToggle("major-toggle", "major-content");
+        }
+
+        // ── Side Projects ──
+        function renderSideProjects() {
+            var container = document.getElementById("side-projects-list");
+            container.classList.add("md:grid-cols-2");
+
+            var html = "";
+            PORTFOLIO_DATA.sideProjects.forEach(function(proj, i) {
+                var hasImage = proj.image && proj.image.trim() !== "";
+                var hasLinks = (proj.github && proj.github.trim() !== "") || (proj.website && proj.website.trim() !== "");
+                var linkIcon = proj.website
+                    ? '<span class="iconify text-muted" data-icon="mdi:open-in-new" data-width="14"></span>'
+                    : '<span class="iconify text-muted" data-icon="mdi:code-tags" data-width="14"></span>';
+
+                html += '<div class="card" style="display: flex; flex-direction: column;">';
+                if (hasImage) {
+                    html += '<div class="card-img-sm">'
+                         +  '<img src="' + proj.image + '" alt="' + proj.title + '" loading="lazy" onerror="this.parentElement.style.display=\'none\'">'
+                         +  '</div>';
+                }
+                html += '<div style="padding: 1rem 1.25rem; flex: 1; display: flex; flex-direction: column;">'
+                    +  '<div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.25rem;">'
+                    +  linkIcon
+                    +  '<h3 class="heading-md" style="font-size: 1rem;">' + proj.title + '</h3>'
+                    +  '</div>'
+                    +  '<span class="text-muted font-mono" style="font-size: 0.75rem; margin-bottom: 0.5rem;">' + proj.date + '</span>'
+                    +  '<p style="flex: 1; line-height: 1.6; margin-bottom: 0.75rem;">' + proj.description + '</p>';
+                if (hasLinks) { html += renderProjectLinks(proj); }
+                html += '<button class="side-toggle" style="display: flex; align-items: center; gap: 0.25rem; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); background: none; border: none; cursor: pointer; padding: 0; margin-top: 0.5rem;" data-index="' + i + '">'
+                    +  '<span class="side-toggle-label" data-collapsed="Skills" data-expanded="Hide Skills">Skills</span>'
+                    +  '<span class="iconify chevron-icon" data-icon="mdi:chevron-down" data-width="14"></span>'
+                    +  '</button>'
+                    +  '</div>'
+                    +  '<div class="expand-content" id="side-content-' + i + '">'
+                    +  '<div style="padding: 0 1.25rem 1rem;">'
+                    +  '<div class="skills-list">';
+                proj.skills.forEach(function(s) { html += renderSkill(s); });
+                html += '</div></div></div></div>';
+            });
+            container.innerHTML = html;
+
+            document.querySelectorAll(".side-toggle").forEach(function(btn) {
+                btn.addEventListener("click", function() {
+                    var idx     = btn.dataset.index;
+                    var content = document.getElementById("side-content-" + idx);
+                    var chevron = btn.querySelector(".chevron-icon");
+                    var label   = btn.querySelector(".side-toggle-label");
+                    content.classList.toggle("open");
+                    chevron.classList.toggle("rotated");
+                    label.textContent = content.classList.contains("open")
+                        ? label.dataset.expanded
+                        : label.dataset.collapsed;
+                });
+            });
+        }
+
+        // ── Mobile menu ──
+        document.getElementById("mobile-menu-btn").addEventListener("click", function() {
+            document.getElementById("mobile-menu").classList.toggle("active");
+        });
+        document.querySelectorAll(".mobile-link").forEach(function(link) {
+            link.addEventListener("click", function() {
+                document.getElementById("mobile-menu").classList.remove("active");
+            });
+        });
+
+        // ── Resume buttons ──
+        document.getElementById("resume-nav-btn").addEventListener("click", handleResumeDownload);
+        document.getElementById("resume-mobile-btn").addEventListener("click", handleResumeDownload);
+        document.getElementById("resume-contact-btn").addEventListener("click", handleResumeDownload);
+
+        // ── Scroll animations ──
+        function initScrollAnimations() {
+            var observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("animate-fade-in-up");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll("section .card").forEach(function(el) {
+                observer.observe(el);
+            });
+        }
+
+        // ── Boot ──
+        populatePersonalInfo();
+        renderSkills();
+        renderExperience();
+        renderEducation();
+        renderMajorProjects();
+        renderSideProjects();
+        requestAnimationFrame(initScrollAnimations);
+
+        document.getElementById("main-content").classList.add("data-loaded");
+        document.getElementById("main-content").classList.remove("data-loading");
+    </script>
+
+</body>
+</html>
