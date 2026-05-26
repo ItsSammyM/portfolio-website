@@ -9,15 +9,23 @@ const PORTFOLIO_DATA = {
     "skills": [
         {
             category: "Languages",
-            items: ["JavaScript", "TypeScript", "Rust", "Python", "Java", "C", "C++", "C#"]
+            items: ["JavaScript", "TypeScript", "Rust", "Python", "Java", "C", "C++", "C#", "HTML", "CSS", "JSX", "JSON"]
         },
         {
             category: "Frameworks & Libraries",
-            items: ["React", "Next.js", "Node.js", "Tailwind CSS", "Prisma"]
+            items: ["React", "Next.js", "Node.js", "Tailwind CSS", "Websockets", "Angular", "JSONata", "WebRTC", "Monogame"]
         },
         {
             category: "Tools & Platforms",
-            items: ["Git", "Docker", "AWS", "GitHub Actions", "PostgreSQL"]
+            items: ["Git", "Docker", "AWS", "GitHub Actions", "AWS", "Cloudflare", "CloudFanatic", "Kubernetes"]
+        },
+        {
+            category: "AI Tools",
+            items: ["Claude", "Cline", "Github Copilot", "Z.ai", "Deepseek"]
+        },
+        {
+            category: "Other",
+            items: ["Unity", "Unreal", "ArcGis Pro", "Arduino"]
         }
     ],
 
@@ -26,11 +34,12 @@ const PORTFOLIO_DATA = {
             "title": "Software Engineer Internship",
             "company": "Hyperproof",
             "date": "June 2023 — August 2023",
-            "description": "Led development of the core platform's new microservices architecture, improving deployment frequency by 3×. Collaborated with product and design to ship features used by 50k+ daily active users.",
+            "description": "A remote-first software company that provides automated enterprise compliance management software.",
             "skills": [
-                { "name": "System Design", "how": "Owned architecture decisions for the notification service end-to-end" },
-                { "name": "TypeScript", "how": "Migrated a 40k-line codebase from JS to TS over 6 months" },
-                { "name": "AWS", "how": "Set up Lambda + DynamoDB pipelines for event processing" }
+                { "name": "Pair Programming", "how": "Pair programmed with team members to efficiently build new features, debug production issues and fix bugs" },
+                { "name": "JSON APIs", "how": "Pulled data via API from Azure Active Directory, AWS, GitHub Enterprise into internal object formats" },
+                { "name": "JSONata", "how": "Coded Declarative JSONata objects to transfer data from APIs to PDF files for hyperproof output documents." },
+                { "name": "Scrum", "how": "Worked on the integrations team containing 15 developers participating in twice-weekly standup meetings."}
             ]
         }
     ],
@@ -58,9 +67,28 @@ const PORTFOLIO_DATA = {
             "website": "https://midnightmachinations.net",
             "image": "images/Midnight Machinations Title.png",
             "skills": [
-                { "name": "Go", "how": "First real Go project — learned channels, interfaces, and the testing package" },
-                { "name": "CLI Design", "how": "Iterated on UX based on feedback from early users on Reddit" },
-                { "name": "CI/CD", "how": "Set up GitHub Actions for cross-compilation and Homebrew tap publishing" }
+                { "name": "Ticketing", "how": "Orchestrated a small team of devs to implement features and bug fixes through GitHub Issues and meetings." },
+                { "name": "Code Review", "how": "Utilized pull request reviews for quality assurance, ensuring code is reliable, and follows design principles." },
+                { "name": "CI/CD", "how": "Designed and built a dockerized CI/CD pipeline using GitHub actions and CloudFlare pages to deploy nightly." },
+                { "name": "Testing", "how": "Automated scenario tests using Rust's testing framework to maintain game functionality and integrity." },
+                { "name": "User Feedback", "how": "Ran playtests and solicited player feedback to find and fix bugs, and streamline UI design."},
+                { "name": "React", "how": "Fully internationalized front-end website built using Python and React with over 50 react components." },
+                { "name": "Async Rust", "how": "Backend written in async rust using tokio async runtime."},
+            ]
+        },
+        {
+            "title": "First Tech Challenge, Team Captain and Head Programmer",
+            "date": "September 2019 - June 2022",
+            "description": "An international robotics engineering and programming competition where high school students build robots to autonomously solve tasks such as building towers out of lego bricks or putting objects on shelves.",
+            "github": "https://github.com/midnight-machinations/midnight-machinations",
+            "website": "",
+            "image": "",
+            "skills": [
+                { "name": "Leadership", "how": "Head programmer for 3 teams of 10 students each creating both autonomous code and player controller code." },
+                { "name": "Robotics Hardware Integration", "how": "Programmed servos, motors, IMU’s, cameras, remote controllers, in addition to color and distance sensors." },
+                { "name": "Calculus Driven Algorithms", "how": "Designed an Euler Integration system to keep track of the robot position based on IMU data." },
+                { "name": "Image Processing", "how": "Utilized image processing contour detection libraries to allow the camera to scan for objects to grab." },
+                { "name": "Education", "how": "Educated robotics team members and middle-school students on math, computer science, and engineering."}
             ]
         }
     ],
@@ -72,10 +100,10 @@ const PORTFOLIO_DATA = {
             "description": "Graphical scripting language using logic gates for use in education and video games written with Rust.",
             "github": "https://github.com/ItsSammyM/ChessBattleRoyale",
             "website": "",
-            "image": "images/vim-md.png",
+            "image": "images/Circut Lang Editor.png",
             "skills": [
-                { "name": "Lua", "how": "Wrote the plugin in Lua for Neovim's native plugin API" },
-                { "name": "Vim API", "how": "Learned buffers, windows, and autocmds while building the plugin" }
+                { "name": "AI tools", "how": "Using Cline with Vscode to automatically build the entire frontend of the editor." },
+                { "name": "Library Design", "how": "Designed Runtime library, exposing types for the scripting lanugage using OOP principals." }
             ]
         },
         {
@@ -84,10 +112,10 @@ const PORTFOLIO_DATA = {
             "description": "Rust based genetic machine learning neural network AI to play “snake”. Achieved 60% grid completion rate.",
             "github": "https://github.com/ItsSammyM/basic_ai_snake",
             "website": "",
-            "image": "images/vim-md.png",
+            "image": "",
             "skills": [
-                { "name": "Lua", "how": "Wrote the plugin in Lua for Neovim's native plugin API" },
-                { "name": "Vim API", "how": "Learned buffers, windows, and autocmds while building the plugin" }
+                { "name": "Neural Networks", "how": "Programmed a Neural Network using matrices to represent weights, bias, and activation." },
+                { "name": "AI Training", "how": "Wrote an evolution algorithm and a backpropogation algorithm to advance training speeds in gradient decent." }
             ]
         },
         {
@@ -96,10 +124,10 @@ const PORTFOLIO_DATA = {
             "description": "Solver for boolean expressions in the command-line to explore NP-Complete algorithmic complexity.",
             "github": "https://github.com/ItsSammyM/poropsitional-logic-calculator",
             "website": "",
-            "image": "images/vim-md.png",
+            "image": "",
             "skills": [
-                { "name": "Lua", "how": "Wrote the plugin in Lua for Neovim's native plugin API" },
-                { "name": "Vim API", "how": "Learned buffers, windows, and autocmds while building the plugin" }
+                { "name": "NP Complete Algorithms", "how": "Created a solver for the class of NP complete problems. Optimized using the concept of knowledge bases." },
+                { "name": "Tokenizer & Parser", "how": "Tokenized user entered expressions from the CLI to create a syntax tree for solving." }
             ]
         },
         {
@@ -110,7 +138,8 @@ const PORTFOLIO_DATA = {
             "website": "",
             "image": "images/chess_battle_royale.png",
             "skills": [
-                { "name": "Lua", "how": "Wrote the plugin in Lua for Neovim's native plugin API" },
+                { "name": "Websockets", "how": "Using a C# library to connect to the front and backends of the desktop app using websockets." },
+                { "name": "Monogame", "how": "UI designed and rendered using Monogames rendering pipeline" },
                 { "name": "Vim API", "how": "Learned buffers, windows, and autocmds while building the plugin" }
             ]
         },
@@ -123,8 +152,21 @@ const PORTFOLIO_DATA = {
             "image": "",
             "skills": [
                 { "name": "Tailwind CSS", "how": "Styled the entire site with utility classes and custom design tokens" },
-                { "name": "JavaScript", "how": "Built a data-driven rendering system so adding content is just editing JSON" }
+                { "name": "JavaScript", "how": "Built a data-driven rendering system so adding content is just editing JSON" },
+                { "name": "Agentic Workflows", "how": "CLI AI Tools created the entire website from just a few prompts, as well as creating skills for cross prompt AI sessions."}
             ]
-        }
+        },
+        {
+            "title": "Physical Light Up Piano",
+            "date": "May 2020",
+            "description": "Physical Lights to attack to a MIDI piano that lights up when keys are pressed.",
+            "github": "",
+            "website": "",
+            "image": "images/chess_battle_royale.png",
+            "skills": [
+                { "name": "Arduino", "how": "Using ArudioC programming lanugage to take USB inputs and convert to colored pixel rgb values." },
+                { "name": "USB protocol", "how": "Attached a USB host sheild and used the MIDI protocol to read incoming data into data structres." }
+            ]
+        },
     ]
 }
