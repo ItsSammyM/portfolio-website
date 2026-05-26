@@ -259,28 +259,40 @@
             var container = document.getElementById("experience-list");
             var html = "";
             PORTFOLIO_DATA.experience.forEach(function(exp, i) {
-                html += '<div class="card">'
-                    +  '<button class="exp-toggle card-header" data-index="' + i + '">'
-                    +  '<div style="flex: 1; min-width: 0;">'
+                html += '<div class="card" style="display: flex; flex-direction: column;">'
+                    +  '<div style="padding: 1rem 1.25rem; flex: 1; display: flex; flex-direction: column;">'
                     +  '<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; margin-bottom: 0.25rem;">'
                     +  '<h3 class="heading-md">' + exp.title + '</h3>'
                     +  '<span class="text-muted font-mono" style="font-size: 0.875rem;">' + exp.date + '</span>'
                     +  '</div>'
-                    +  '<p class="text-accent" style="font-size: 0.875rem; font-weight: 500;">' + exp.company + '</p>'
-                    +  '</div>'
-                    +  '<span class="iconify chevron-icon text-muted" data-icon="mdi:chevron-down" data-width="24"></span>'
+                    +  '<p class="text-accent" style="font-size: 0.875rem; font-weight: 500; margin-bottom: 0.5rem;">' + exp.company + '</p>'
+                    +  '<p style="flex: 1; line-height: 1.6; margin-bottom: 0.75rem;">' + exp.description + '</p>'
+                    +  '<button class="exp-toggle" style="display: flex; align-items: center; gap: 0.25rem; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); background: none; border: none; cursor: pointer; padding: 0;" data-index="' + i + '">'
+                    +  '<span class="exp-toggle-label" data-collapsed="Skills" data-expanded="Hide Skills">Skills</span>'
+                    +  '<span class="iconify chevron-icon" data-icon="mdi:chevron-down" data-width="14"></span>'
                     +  '</button>'
+                    +  '</div>'
                     +  '<div class="expand-content" id="exp-content-' + i + '">'
-                    +  '<div class="card-body">'
-                    +  '<p style="line-height: 1.6; margin-bottom: 1rem;">' + exp.description + '</p>'
-                    +  '<div>'
-                    +  '<p class="text-muted" style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem;">Skills Gained</p>'
+                    +  '<div style="padding: 0 1.25rem 1rem;">'
                     +  '<div class="skills-list">';
                 exp.skills.forEach(function(s) { html += renderSkill(s); });
-                html += '</div></div></div></div></div>';
+                html += '</div></div></div></div>';
             });
             container.innerHTML = html;
-            setupToggle("exp-toggle", "exp-content");
+
+            document.querySelectorAll(".exp-toggle").forEach(function(btn) {
+                btn.addEventListener("click", function() {
+                    var idx     = btn.dataset.index;
+                    var content = document.getElementById("exp-content-" + idx);
+                    var chevron = btn.querySelector(".chevron-icon");
+                    var label   = btn.querySelector(".exp-toggle-label");
+                    content.classList.toggle("open");
+                    chevron.classList.toggle("rotated");
+                    label.textContent = content.classList.contains("open")
+                        ? label.dataset.expanded
+                        : label.dataset.collapsed;
+                });
+            });
         }
 
         // ── Education ──
@@ -288,28 +300,40 @@
             var container = document.getElementById("education-list");
             var html = "";
             PORTFOLIO_DATA.education.forEach(function(edu, i) {
-                html += '<div class="card">'
-                    +  '<button class="edu-toggle card-header" data-index="' + i + '">'
-                    +  '<div style="flex: 1; min-width: 0;">'
-                    +  '<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; margin-bottom: 0.25rem;">'
+                html += '<div class="card" style="display: flex; flex-direction: column;">'
+                    +  '<div style="padding: 1rem 1.25rem; flex: 1; display: flex; flex-direction: column;">'
+                    +  '<div style="display: flex; flex-wrap: align-items: center; gap: 0.5rem; margin-bottom: 0.25rem;">'
                     +  '<h3 class="heading-md">' + edu.degree + '</h3>'
                     +  '<span class="text-muted font-mono" style="font-size: 0.875rem;">' + edu.date + '</span>'
                     +  '</div>'
-                    +  '<p class="text-accent" style="font-size: 0.875rem; font-weight: 500;">' + edu.school + '</p>'
-                    +  '</div>'
-                    +  '<span class="iconify chevron-icon text-muted" data-icon="mdi:chevron-down" data-width="24"></span>'
+                    +  '<p class="text-accent" style="font-size: 0.875rem; font-weight: 500; margin-bottom: 0.5rem;">' + edu.school + '</p>'
+                    +  '<p style="flex: 1; line-height: 1.6; margin-bottom: 0.75rem;">' + edu.description + '</p>'
+                    +  '<button class="edu-toggle" style="display: flex; align-items: center; gap: 0.25rem; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); background: none; border: none; cursor: pointer; padding: 0;" data-index="' + i + '">'
+                    +  '<span class="edu-toggle-label" data-collapsed="Skills" data-expanded="Hide Skills">Skills</span>'
+                    +  '<span class="iconify chevron-icon" data-icon="mdi:chevron-down" data-width="14"></span>'
                     +  '</button>'
+                    +  '</div>'
                     +  '<div class="expand-content" id="edu-content-' + i + '">'
-                    +  '<div class="card-body">'
-                    +  '<p style="line-height: 1.6; margin-bottom: 1rem;">' + edu.description + '</p>'
-                    +  '<div>'
-                    +  '<p class="text-muted" style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem;">Skills Gained</p>'
+                    +  '<div style="padding: 0 1.25rem 1rem;">'
                     +  '<div class="skills-list">';
                 edu.skills.forEach(function(s) { html += renderSkill(s); });
-                html += '</div></div></div></div></div>';
+                html += '</div></div></div></div>';
             });
             container.innerHTML = html;
-            setupToggle("edu-toggle", "edu-content");
+
+            document.querySelectorAll(".edu-toggle").forEach(function(btn) {
+                btn.addEventListener("click", function() {
+                    var idx     = btn.dataset.index;
+                    var content = document.getElementById("edu-content-" + idx);
+                    var chevron = btn.querySelector(".chevron-icon");
+                    var label   = btn.querySelector(".edu-toggle-label");
+                    content.classList.toggle("open");
+                    chevron.classList.toggle("rotated");
+                    label.textContent = content.classList.contains("open")
+                        ? label.dataset.expanded
+                        : label.dataset.collapsed;
+                });
+            });
         }
 
         // ── Major Projects ──
@@ -323,32 +347,47 @@
                     ? '<span class="iconify text-muted" data-icon="mdi:open-in-new" data-width="14"></span>'
                     : '<span class="iconify text-muted" data-icon="mdi:code-tags" data-width="14"></span>';
 
-                html += '<div class="card">';
-                if (hasImage) {
-                    html += '<div class="card-img-lg">'
-                         +  '<img src="' + proj.image + '" alt="' + proj.title + '" loading="lazy" onerror="this.parentElement.style.display=\'none\'">'
-                         +  '</div>';
-                }
-                html += '<button class="major-toggle card-header" data-index="' + i + '">'
-                    +  '<div style="flex: 1; min-width: 0; display: flex; align-items: center; gap: 0.5rem;">'
+                html += '<div class="card" style="display: flex; flex-direction: column;">';
+                html += '<div style="padding: 1rem 1.25rem; flex: 1; display: flex; flex-direction: column;">'
+                    +  '<div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.25rem;">'
                     +  linkIcon
                     +  '<h3 class="heading-md">' + proj.title + '</h3>'
                     +  '<span class="text-muted font-mono" style="font-size: 0.875rem;">' + proj.date + '</span>'
                     +  '</div>'
-                    +  '<span class="iconify chevron-icon text-muted" data-icon="mdi:chevron-down" data-width="24"></span>'
-                    +  '</button>'
-                    +  '<div class="expand-content" id="major-content-' + i + '">'
-                    +  '<div class="card-body">'
-                    +  '<p style="line-height: 1.6; margin-bottom: 0.75rem;">' + proj.description + '</p>';
+                    +  '<p style="flex: 1; line-height: 1.6; margin-bottom: 0.75rem;">' + proj.description + '</p>';
                 if (hasLinks) { html += renderProjectLinks(proj); }
-                html += '<div>'
-                    +  '<p class="text-muted" style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem;">Skills Gained</p>'
-                    +  '<div class="skills-list">';
+                html += '<button class="major-toggle" style="display: flex; align-items: center; gap: 0.25rem; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); background: none; border: none; cursor: pointer; padding: 0; margin-top: 0.5rem;" data-index="' + i + '">'
+                    +  '<span class="major-toggle-label" data-collapsed="Skills" data-expanded="Hide Skills">Skills</span>'
+                    +  '<span class="iconify chevron-icon" data-icon="mdi:chevron-down" data-width="14"></span>'
+                    +  '</button>'
+                    +  '</div>'
+                    +  '<div class="expand-content" id="major-content-' + i + '">'
+                    +  '<div style="padding: 0 1.25rem 1rem;">';
+                html += '<div class="project-content-flex">';
+                if (hasImage) {
+                    html += '<div class="expandable-image">'
+                         +  '<img src="' + proj.image + '" alt="' + proj.title + '" loading="lazy" style="width: 100%; height: auto; border-radius: 0.5rem;">'
+                         +  '</div>';
+                }
+                html += '<div class="skills-list">';
                 proj.skills.forEach(function(s) { html += renderSkill(s); });
                 html += '</div></div></div></div></div>';
             });
             container.innerHTML = html;
-            setupToggle("major-toggle", "major-content");
+
+            document.querySelectorAll(".major-toggle").forEach(function(btn) {
+                btn.addEventListener("click", function() {
+                    var idx     = btn.dataset.index;
+                    var content = document.getElementById("major-content-" + idx);
+                    var chevron = btn.querySelector(".chevron-icon");
+                    var label   = btn.querySelector(".major-toggle-label");
+                    content.classList.toggle("open");
+                    chevron.classList.toggle("rotated");
+                    label.textContent = content.classList.contains("open")
+                        ? label.dataset.expanded
+                        : label.dataset.collapsed;
+                });
+            });
         }
 
         // ── Side Projects ──
@@ -365,11 +404,6 @@
                     : '<span class="iconify text-muted" data-icon="mdi:code-tags" data-width="14"></span>';
 
                 html += '<div class="card" style="display: flex; flex-direction: column;">';
-                if (hasImage) {
-                    html += '<div class="card-img-sm">'
-                         +  '<img src="' + proj.image + '" alt="' + proj.title + '" loading="lazy" onerror="this.parentElement.style.display=\'none\'">'
-                         +  '</div>';
-                }
                 html += '<div style="padding: 1rem 1.25rem; flex: 1; display: flex; flex-direction: column;">'
                     +  '<div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.25rem;">'
                     +  linkIcon
@@ -384,10 +418,16 @@
                     +  '</button>'
                     +  '</div>'
                     +  '<div class="expand-content" id="side-content-' + i + '">'
-                    +  '<div style="padding: 0 1.25rem 1rem;">'
-                    +  '<div class="skills-list">';
+                    +  '<div style="padding: 0 1.25rem 1rem;">';
+                html += '<div class="project-content-flex">';
+                if (hasImage) {
+                    html += '<div class="expandable-image">'
+                         +  '<img src="' + proj.image + '" alt="' + proj.title + '" loading="lazy" style="width: 100%; height: auto; border-radius: 0.5rem;">'
+                         +  '</div>';
+                }
+                html += '<div class="skills-list">';
                 proj.skills.forEach(function(s) { html += renderSkill(s); });
-                html += '</div></div></div></div>';
+                html += '</div></div></div></div></div>';
             });
             container.innerHTML = html;
 

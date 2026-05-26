@@ -54,8 +54,8 @@ const PORTFOLIO_DATA = {
             "title": "Midnight Machinations",
             "date": "2019 - Present",
             "description": "A web-based social deduction video game with 85 in-game characters using asynchronous rust, secure websockets, running on a virtual private server (VPS), and containing over 43,000 lines of code. With a playerbase of 200 players that participate in game nights several times a week. Games typically have 6 - 20 simultaneous players.",
-            "link": "https://github.com/midnight-machinations/midnight-machinations",
-            "website": "",
+            "github": "https://github.com/midnight-machinations/midnight-machinations",
+            "website": "https://midnightmachinations.net",
             "image": "images/Midnight Machinations Title.png",
             "skills": [
                 { "name": "Go", "how": "First real Go project — learned channels, interfaces, and the testing package" },
@@ -70,7 +70,7 @@ const PORTFOLIO_DATA = {
             "title": "Circuit Scripting Language",
             "date": "March 2026 - May 2026",
             "description": "Graphical scripting language using logic gates for use in education and video games written with Rust.",
-            "link": "https://github.com/ItsSammyM/ChessBattleRoyale",
+            "github": "https://github.com/ItsSammyM/ChessBattleRoyale",
             "website": "",
             "image": "images/vim-md.png",
             "skills": [
@@ -82,7 +82,7 @@ const PORTFOLIO_DATA = {
             "title": "AI that plays Snake Game",
             "date": "January 2025 - Febuary 2025",
             "description": "Rust based genetic machine learning neural network AI to play “snake”. Achieved 60% grid completion rate.",
-            "link": "https://github.com/ItsSammyM/basic_ai_snake",
+            "github": "https://github.com/ItsSammyM/basic_ai_snake",
             "website": "",
             "image": "images/vim-md.png",
             "skills": [
@@ -94,7 +94,7 @@ const PORTFOLIO_DATA = {
             "title": "Satisfiability (SAT) solver",
             "date": "October 2024 - May 2025",
             "description": "Solver for boolean expressions in the command-line to explore NP-Complete algorithmic complexity.",
-            "link": "https://github.com/ItsSammyM/poropsitional-logic-calculator",
+            "github": "https://github.com/ItsSammyM/poropsitional-logic-calculator",
             "website": "",
             "image": "images/vim-md.png",
             "skills": [
@@ -106,7 +106,7 @@ const PORTFOLIO_DATA = {
             "title": "Chess Battle Royale",
             "date": "June 2021 - August 2021",
             "description": "C# based multiplayer chess for up to 256 players using Monogame Framework, Websockets, and OOP.",
-            "link": "https://github.com/ItsSammyM/ChessBattleRoyale",
+            "github": "https://github.com/ItsSammyM/ChessBattleRoyale",
             "website": "",
             "image": "images/chess_battle_royale.png",
             "skills": [
@@ -118,8 +118,8 @@ const PORTFOLIO_DATA = {
             "title": "Portfolio Website",
             "date": "2024",
             "description": "This very site! Built as a single HTML file with Tailwind CSS, designed for easy GitHub Pages deployment.",
-            "link": "",
-            "website": "",
+            "github": "https://github.com/ItsSammyM/portfolio-website",
+            "website": "https://itssammym.github.io/portfolio-website/",
             "image": "",
             "skills": [
                 { "name": "Tailwind CSS", "how": "Styled the entire site with utility classes and custom design tokens" },
