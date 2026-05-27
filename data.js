@@ -59,6 +59,7 @@ const PORTFOLIO_DATA = {
                 { "name": "Multivariable Calculus", "how": "Partial different equations and vector calculus, inclusing divergence and curl." },
                 { "name": "Linear Algebra", "how": "Vectors, matrices, eigenvectors, determinants, etc." },
                 { "name": "Discrete Math", "how": "Boolean algebra, first order logic and predicate logic, combinatorics, mathematical proofs" },
+                { "name": "Mathmatical Modeling", "how": "Creating models to represent real data, and writing a scientific paper alongside it. " },
             ]
         }
     ],
