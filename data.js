@@ -54,12 +54,14 @@ const PORTFOLIO_DATA = {
                 { "name": "Intro to Artificial Intelligence", "how": "AI Models such as Ada boost and Neural Networks, and Training Algorithms such as simulated annealing and evolution." },
                 { "name": "Analysis of Algorithms", "how": "Advanced algorithms like multi-dimentional dynamic programming and time and space complexity analysis." },
                 { "name": "Computer Science Theory", "how": "Deterministic and non deterministic finite automata, CFGs, turing machines. Languages and regular expressions (regex)." },
-                { "name": "Machanics of Programming", "how": "Binary representations of data types. Variable sotrage on the stack and heap, memory management in C." },
+                { "name": "Mechanics of Programming", "how": "Binary representations of data types. Variable storage on the stack and heap, memory management in C." },
                 { "name": "Probability and Statistics", "how": "Applied statistics with many probability distributions. Expected value calculation and combinatorics." },
                 { "name": "Multivariable Calculus", "how": "Partial different equations and vector calculus, inclusing divergence and curl." },
                 { "name": "Linear Algebra", "how": "Vectors, matrices, eigenvectors, determinants, etc." },
                 { "name": "Discrete Math", "how": "Boolean algebra, first order logic and predicate logic, combinatorics, mathematical proofs" },
-                { "name": "Mathmatical Modeling", "how": "Creating models to represent real data, and writing a scientific paper alongside it. " },
+                { "name": "Mathematical Modeling", "how": "Creating models to represent real data, and writing a scientific paper alongside it. " },
+                { "name": "Intro to Graph Theory", "how": "Djikstras Algorithm, BFS/DFS. Proofs involving graphs. 4-Color theorm. Planar and K-partite graphs." },
+                { "name": "Real Variables", "how": "Proofs involving topological and metric spaces. Limits, Open, Closed, and Compact sets." },
             ]
         }
     ],
@@ -168,7 +170,7 @@ const PORTFOLIO_DATA = {
             "description": "Physical Lights to attach to a MIDI piano that lights up when keys are pressed.",
             "github": "",
             "website": "",
-            "image": "images/chess_battle_royale.png",
+            "image": "",
             "skills": [
                 { "name": "Arduino", "how": "Using ArudioC programming lanugage to take USB inputs and convert to colored pixel rgb values." },
                 { "name": "USB protocol", "how": "Attached a USB host sheild and used the MIDI protocol to read incoming data into data structres." }
