@@ -52,8 +52,8 @@ const PORTFOLIO_DATA = {
             "description": "Dean's List for 6 semesters.",
             "skills": [
                 { "name": "Intro to Artificial Intelligence", "how": "AI Models such as Ada boost and Neural Networks, and Training Algorithms such as simulated annealing and evolution." },
-                { "name": "Analysis of Algorithms", "how": "Advanced algorithms like multi dimentional dynamic programming and time and space complexity analysis." },
-                { "name": "Computer Science Theory", "how": "Deterministic & non deterministic finite automata, CFGs, turing machines. Languages and regular expressions (regex)." },
+                { "name": "Analysis of Algorithms", "how": "Advanced algorithms like multi-dimentional dynamic programming and time and space complexity analysis." },
+                { "name": "Computer Science Theory", "how": "Deterministic and non deterministic finite automata, CFGs, turing machines. Languages and regular expressions (regex)." },
                 { "name": "Machanics of Programming", "how": "Binary representations of data types. Variable sotrage on the stack and heap, memory management in C." },
                 { "name": "Probability and Statistics", "how": "Applied statistics with many probability distributions. Expected value calculation and combinatorics." },
                 { "name": "Multivariable Calculus", "how": "Partial different equations and vector calculus, inclusing divergence and curl." },
