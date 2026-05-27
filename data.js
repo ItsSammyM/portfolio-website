@@ -159,7 +159,7 @@ const PORTFOLIO_DATA = {
         {
             "title": "Physical Light Up Piano",
             "date": "May 2020",
-            "description": "Physical Lights to attack to a MIDI piano that lights up when keys are pressed.",
+            "description": "Physical Lights to attach to a MIDI piano that lights up when keys are pressed.",
             "github": "",
             "website": "",
             "image": "images/chess_battle_royale.png",
